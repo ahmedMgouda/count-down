@@ -1,0 +1,32 @@
+<DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="css/flipTimer.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/jquery.flipTimer.js"></script>
+  </head>
+<body>
+    <div class="flipTimer">
+      <div class="days"></div>
+      <div class="hours"></div>
+      <div class="minutes"></div>
+      <div class="seconds"></div>
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+              $('.flipTimer').flipTimer({ 
+
+              // count up or countdown
+              direction: 'down', 
+
+              // the target <a href="https://www.jqueryscript.net/time-clock/">date</a>
+              date: 'January 20, 2015 08:30:30', 
+
+              // callback works only with direction = "down"
+              callback: function() { alert('times up!'); }
+
+              });
+        });
+    </script>
+</body>
